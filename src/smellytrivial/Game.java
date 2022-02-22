@@ -5,9 +5,9 @@ import java.util.LinkedList;
 
 public class Game {
     ArrayList jugadores = new ArrayList();
-    int[] posiciones = new int[6];
-    int[] monederos = new int[6];
-    boolean[] enCasillaCastigo = new boolean[6];
+    int[] posiciones = new int[7];
+    int[] monederos = new int[7];
+    boolean[] enCasillaCastigo = new boolean[7];
 
     LinkedList preguntasCultura = new LinkedList();
     LinkedList preguntasCiencias = new LinkedList();
@@ -17,25 +17,29 @@ public class Game {
     int jugadorActual = 0;
     boolean estaSaliendoDeLaCarcel;
 
-    public Game(){
+    public Game() {
         for (int i = 0; i < 50; i++) {
             preguntasCultura.addLast("Pregunta de Cultura " + i);
             preguntasCiencias.addLast(("Pregunta de Ciencias " + i));
             preguntasDeportes.addLast(("Pregunta de Deportes " + i));
             preguntasMusica.addLast(crearPreguntaMusica(i));
         }
-    } 
+    }
 
-    public String crearPreguntaMusica(int index){
+    public String crearPreguntaMusica(int index) {
         return "Pregunta de Música " + index;
     }
 
     public boolean esJugable() {
-        if (cuantosJugadores() < 2){
+        if (cuantosJugadores() < 2) {
             System.out.println("Se necesitan dos jugadores para comenzar a jugar");
             return false;
+        } else if (cuantosJugadores() > 6) {
+            System.out.println("Se necesitan como máximo seis jugadores para comenzar a jugar");
+            return false;
+        } else {
+            return true;
         }
-        return true;
     }
 
     public boolean agregar(String playerName) {
@@ -119,7 +123,7 @@ public class Game {
     }
 
     public boolean fueRespuestaCorrecta() {
-        if (enCasillaCastigo[jugadorActual]){
+        if (enCasillaCastigo[jugadorActual]) {
             if (estaSaliendoDeLaCarcel) {
                 System.out.println("Respuesta correcta!!!!");
                 monederos[jugadorActual]++;
@@ -140,7 +144,6 @@ public class Game {
             }
 
 
-
         } else {
 
             System.out.println("Respuesta correcta!!!!");
@@ -158,9 +161,9 @@ public class Game {
         }
     }
 
-    public boolean respuestaIncorrecta(){
+    public boolean respuestaIncorrecta() {
         System.out.println("Respuesta incorrecta");
-        System.out.println(jugadores.get(jugadorActual)+ " va a la casilla de castigo");
+        System.out.println(jugadores.get(jugadorActual) + " va a la casilla de castigo");
         enCasillaCastigo[jugadorActual] = true;
 
         jugadorActual++;
