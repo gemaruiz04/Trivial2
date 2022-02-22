@@ -24,7 +24,7 @@ public class Game {
             preguntasDeportes.addLast(("Pregunta de Deportes " + i));
             preguntasMusica.addLast(crearPreguntaMusica(i));
         }
-    }
+    } 
 
     public String crearPreguntaMusica(int index){
         return "Pregunta de Música " + index;

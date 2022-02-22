@@ -9,4 +9,4 @@ Creamos test unitario "si_al_principio_saco_un_1_voy_a_casilla_1"
 
 ## Problema 1
 
-Modificamos el método esJugable para que limite el numero de jugadores a dos y lo comprobamos primero con un test que añada un jugador (un_jugador) y después otro test con más de un jugador (al_menos_dos_jugadores) 
+Modificamos el método esJugable para que limite el numero de jugadores a dos y lo comprobamos primero con un test que añada un jugador (un_jugador) y después otro test con más de un jugador (al_menos_dos_jugadores)  
