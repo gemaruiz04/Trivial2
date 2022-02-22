@@ -17,7 +17,7 @@ public class Game {
     int jugadorActual = 0;
     boolean estaSaliendoDeLaCarcel;
 
-    public  Game(){
+    public Game(){
         for (int i = 0; i < 50; i++) {
             preguntasCultura.addLast("Pregunta de Cultura " + i);
             preguntasCiencias.addLast(("Pregunta de Ciencias " + i));
@@ -31,11 +31,14 @@ public class Game {
     }
 
     public boolean esJugable() {
-        return (cuantosJugadores() >= 2);
+        if (cuantosJugadores() < 2){
+            System.out.println("Se necesitan dos jugadores para comenzar a jugar");
+            return false;
+        }
+        return true;
     }
 
     public boolean agregar(String playerName) {
-
 
         jugadores.add(playerName);
         posiciones[cuantosJugadores()] = 0;

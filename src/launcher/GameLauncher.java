@@ -12,6 +12,7 @@ public class GameLauncher {
     public static void main(String[] args) {
         Game juego = new Game();
 
+
         juego.agregar("Maria");
         juego.agregar("Juan");
         juego.agregar("Antonio");

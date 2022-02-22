@@ -5,7 +5,7 @@ import smellytrivial.Game;
 public class TrivialTests {
     @Test
     public void true_is_true(){
-        Assertions.assertTrue(false);
+        Assertions.assertTrue(true);
     }
 
     @Test
@@ -23,4 +23,22 @@ public class TrivialTests {
         String actual = jugador.nuevaPosicionJugador();
         Assertions.assertEquals(expected,actual);
     }
+
+    @Test
+    public void un_jugador(){
+        Game game = new Game();
+        game.agregar("Maria");
+        boolean jugador = game.esJugable();
+    }
+
+    @Test
+    public void al_menos_dos_jugadores(){
+        Game game = new Game();
+        game.agregar("Maria");
+        game.agregar("Juan");
+        boolean jugador = game.esJugable();
+        Assertions.assertEquals(true, jugador);
+    }
+
+
 }
