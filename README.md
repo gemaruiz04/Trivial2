@@ -17,4 +17,11 @@ Modificamos de nuevo el método esJugable para limitar el máximo de jugadores a
 
 ## Problema 3
 
-Se modifica el metodo fueRespuestaCorrecta para hacer que el array que permite al jugador salir de la carcel sea true en el momento que acierte una respuesta. Después se comprueba con el test llamado sale_de_carcel.
+Se modifica el metodo fueRespuestaCorrecta para hacer que el array que permite al jugador salir de la carcel sea true en el momento que acierte una respuesta.
+Además se debe modificar el tamaño del array para comprobar si el jugador sale de la carcel (enCasillaCastigo[cuantosJugadores()-1] = false).
+Después se comprueba con el test llamado sale_de_carcel.
+
+## Problema 6
+
+Se refactoriza el método fueRespuestaCorrecta extrayendo código duplicado y creando un nuevo método (llamado respuestaCorrecta)
+
