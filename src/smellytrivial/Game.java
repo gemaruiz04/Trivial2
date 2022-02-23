@@ -45,9 +45,9 @@ public class Game {
     public boolean agregar(String playerName) {
 
         jugadores.add(playerName);
-        posiciones[cuantosJugadores()] = 0;
-        monederos[cuantosJugadores()] = 0;
-        enCasillaCastigo[cuantosJugadores()] = false;
+        posiciones[cuantosJugadores()-1] = 0;
+        monederos[cuantosJugadores()-1] = 0;
+        enCasillaCastigo[cuantosJugadores()-1] = false;
 
         System.out.println(playerName + " se ha unido a la partida");
         System.out.println("Es el jugador número " + jugadores.size());
@@ -67,6 +67,7 @@ public class Game {
                 estaSaliendoDeLaCarcel = true;
 
                 System.out.println(jugadores.get(jugadorActual) + " sale de la casilla de castigo");
+
                 posiciones[jugadorActual] = posiciones[jugadorActual] + puntosDado;
                 if (posiciones[jugadorActual] > 11) posiciones[jugadorActual] = posiciones[jugadorActual] - 12;
 
@@ -123,7 +124,7 @@ public class Game {
     }
 
     public boolean fueRespuestaCorrecta() {
-        if (enCasillaCastigo[jugadorActual]) {
+        if (enCasillaCastigo[jugadorActual] = false) {
             if (estaSaliendoDeLaCarcel) {
                 System.out.println("Respuesta correcta!!!!");
                 monederos[jugadorActual]++;
