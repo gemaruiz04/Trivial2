@@ -49,6 +49,7 @@ public class TrivialTests {
             player.agregar("Mario");
             player.agregar("Carla");
             boolean players = player.esJugable();
+            Assertions.assertEquals(false,players);
         } catch (ArrayIndexOutOfBoundsException e) {
         }
     }

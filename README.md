@@ -21,6 +21,13 @@ Se modifica el metodo fueRespuestaCorrecta para hacer que el array que permite a
 Además se debe modificar el tamaño del array para comprobar si el jugador sale de la carcel (enCasillaCastigo[cuantosJugadores()-1] = false).
 Después se comprueba con el test llamado sale_de_carcel.
 
+## Problema 4
+
+
+## Problema 5
+
+Se refactoriza el método tirarDado para eliminar el código sobrante creando a su vez un nuevo método llamado pasa_siguiente_jugador (que incluye dicho código extraido)
+
 ## Problema 6
 
 Se refactoriza el método fueRespuestaCorrecta extrayendo código duplicado y creando un nuevo método (llamado respuestaCorrecta)
