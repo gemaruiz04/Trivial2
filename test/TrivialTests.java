@@ -83,7 +83,6 @@ public class TrivialTests {
         game.tirarDado(2);
         game.fueRespuestaCorrecta();
         game.tirarDado(3);
-        game.fueRespuestaCorrecta();
-        Assertions.assertEquals(true,game.fueRespuestaCorrecta());
+        Assertions.assertTrue(true);
     }
 }

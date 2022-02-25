@@ -65,7 +65,7 @@ public class Game {
         if (enCasillaCastigo[jugadorActual]) {
             if (puntosDado % 2 != 0) {
                 estaSaliendoDeLaCarcel = true;
-
+                enCasillaCastigo[jugadorActual]= false;
                 System.out.println(jugadores.get(jugadorActual) + " sale de la casilla de castigo");
 
                 pasa_siguiente_jugador(puntosDado);
@@ -127,7 +127,7 @@ public class Game {
     }
 
     public boolean fueRespuestaCorrecta() {
-        if (enCasillaCastigo[jugadorActual] = false) {
+        if (!enCasillaCastigo[jugadorActual]) {
             if (estaSaliendoDeLaCarcel) {
                 respuestaCorrecta();
 
